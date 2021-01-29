@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kingdom Strike - Game</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="kh.ico" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img class="game--logo" src="./Images/logoUsed.png" alt="game-logo" />
+      <img
+        class="img--sora"
+        id="img--0"
+        src="./Images/sora.png"
+        alt="chara-sora"
+      />
+      <img
+        class="img--xehanort"
+        id="img--1"
+        src="./Images/xehanort.png"
+        alt="chara-xehanort"
+      />
+    </header>
+    <main>
+      <section class="player player--0 turn">
+        <h2 class="name" id="name--0">Player 1</h2>
+        <p class="score" id="score--0">50</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--1">Player 2</h2>
+        <p class="score" id="score--1">50</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
+      <img class="card" src="./Images/0.png" alt="kingdom-card" />
+      <button class="btn btn--new">🔄 Re:Start</button>
+      <button class="btn btn--summon">🃏 Summon Card</button>
+      <button class="btn btn--collect">🔴 Collect Card</button>
+      <button class="btn btn--music">🎵 Music</button>
+      <button class="btn btn--rule">⚔ Game Rules</button>
+      <button class="btn btn--credit">💡 Credit</button>
+    </main>
+    <!-- Modal Game Rules -->
+    <div class="modal hidden rule--pointer">
+      <form class="modal--rule">
+        <button class="btn--close--modal" id="close--rule">X</button>
+        <h2 class="modal--header">Game Rules</h2>
+        <ul>
+          <li>Re:start button : to restart the game.</li>
+          <li>Music button : to turn on/off the music.</li>
+          <li>
+            Summon Card button : to randomly calling almighty power card from
+            each side.
+          </li>
+          <li>Card Set</li>
+          <table class="table--score">
+            <tr>
+              <th>Player 1 Set</th>
+              <th>Player 2 Set</th>
+              <th>Score</th>
+            </tr>
+            <tr>
+              <td>Heartless</td>
+              <td>King Mickey</td>
+              <td>Lose Current Score and End turn</td>
+            </tr>
+            <tr>
+              <td>Xehanort</td>
+              <td>Moogle Kupo</td>
+              <td>Lose Current Score and End turn</td>
+            </tr>
+            <tr>
+              <td>Rikku</td>
+              <td>Axel</td>
+              <td>2 Point</td>
+            </tr>
+            <tr>
+              <td>Kairi</td>
+              <td>Demyx</td>
+              <td>3 Point</td>
+            </tr>
+            <tr>
+              <td>Roxas</td>
+              <td>Luxord</td>
+              <td>4 Point</td>
+            </tr>
+            <tr>
+              <td>Aqua</td>
+              <td>Larxene</td>
+              <td>5 Point</td>
+            </tr>
+            <tr>
+              <td>Terra</td>
+              <td>Marluxia</td>
+              <td>6 Point</td>
+            </tr>
+            <tr>
+              <td>Goofy</td>
+              <td>Saïx</td>
+              <td>7 Point</td>
+            </tr>
+            <tr>
+              <td>Donald</td>
+              <td>Xemnas</td>
+              <td>8 Point</td>
+            </tr>
+            <tr>
+              <td>Sora</td>
+              <td>Xemnas Final Form</td>
+              <td>9 Point</td>
+            </tr>
+          </table>
+          <li>
+            Collect Card button : to convert your current score to your main
+            score and end turn.
+          </li>
+          <li>
+            First player which has reached 200 points first is the winner.
+          </li>
+        </ul>
+      </form>
+    </div>
+    <!-- Modal Credit -->
+    <div class="modal hidden credit--pointer">
+      <form class="modal--credit">
+        <button class="btn--close--modal" id="close--credit">X</button>
+        <h2 class="modal--header">Credit</h2>
+        <ul>
+          <li>
+            Kingdom Heart Font Logo by
+            <a href="https://fontmeme.com/kingdom-hearts-font/">Fontmeme</a>
+          </li>
+          <li>
+            SFX © Kingdom Hearts Uploaded by
+            <a href="https://www.youtube.com/c/SubjectULTIMA/featured"
+              >SubjectULTIMA</a
+            >
+          </li>
+          <li>
+            Background Image
+            <a href="https://www.kh13.com/gallery/image/45529-pc-1920x1200/"
+              >© Kingdom Heart 2.8 Prologue</a
+            >
+          </li>
+          <li>
+            Music by
+            <a href="https://www.youtube.com/watch?v=Irl_Dc-Tc8U"
+              >Utada Hikaru - Simple and Clean Ray of Hope Remix</a
+            >
+            © Kingdom Heart 2.8 Prologue
+          </li>
+          <li>
+            Card Design by
+            <a
+              href="https://www.deviantart.com/muffo11/art/Kingdom-Hearts-Printable-Playing-Cards-43389245"
+              >Deviantart muffo11</a
+            >
+          </li>
+          <li>
+            Card Edited by myself using
+            <a
+              href="https://www.canva.com/design/DAEUhsiSluw/SavYNWfxj3FVyS0NY1j77w/view?utm_content=DAEUhsiSluw&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton"
+              >Canva and Affinity Design by Serif</a
+            >
+          </li>
+          <li>
+            <a href="https://www.kingdomhearts.com/3/us/home/">
+              If you like or want to play the game, please consider to buy the
+              game at Store to support the developer, and awesome game awaits!
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/naufalwibs">
+              Webpage, Style, and Script created by Naufal W.</a
+            >
+            as a student @hacktiv8.
+            <a href="./log/myLog.pdf"> First design log vs time.</a>
+          </li>
+          <li>
+            All characters and artwork © Kingdom Hearts, Disney, and Square
+            Enix. Made entirely for final bootcamp preparation project and fans
+            appreciation purposes only.
+          </li>
+          <li>
+            Thank God for giving me a chance to enroll here. Thanks for everyone
+            who supporting me on this project!
+          </li>
+        </ul>
+      </form>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

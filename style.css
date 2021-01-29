@@ -1,0 +1,242 @@
+body {
+  background: url('./Images/bgHR.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Orbitron', sans-serif;
+}
+html {
+  font-size: 85%;
+  box-sizing: border-box;
+}
+
+main {
+  position: relative;
+  width: 100rem;
+  height: 60rem;
+  background-color: rgba(255, 255, 255, 0.35);
+  border-radius: 9px;
+  overflow: hidden;
+  display: flex;
+}
+
+.game--logo {
+  position: absolute;
+  width: 30rem;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  transition: all 0.75s;
+}
+
+.img--sora {
+  position: absolute;
+  top: 10rem;
+  left: 25%;
+  height: 40rem;
+}
+
+.img--win {
+  z-index: 1;
+}
+
+.img--xehanort {
+  position: absolute;
+  right: 27%;
+  top: 15rem;
+  height: 40rem;
+}
+
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+
+  padding: 0.7rem 2.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  background-color: var(--color-primary-darker);
+  color: rgb(194, 211, 227);
+}
+
+.btn--new {
+  top: 3rem;
+  left: 12rem;
+}
+
+.btn--summon {
+  top: 39.3rem;
+}
+
+.btn--collect {
+  top: 46.1rem;
+}
+
+.btn--music {
+  top: 7.5rem;
+  left: 10rem;
+}
+
+.btn--rule {
+  top: 52rem;
+}
+
+.btn--credit {
+  top: 56rem;
+}
+
+.name {
+  position: relative;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.score {
+  font-size: 8rem;
+  font-weight: 300;
+  color: #79203a;
+  margin-bottom: auto;
+}
+
+.current {
+  background-color: #3e3134;
+  opacity: 0.8;
+  border-radius: 9px;
+  color: #fff;
+  width: 65%;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.75s;
+}
+
+.current-label {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  color: #ddd;
+}
+
+.current-score {
+  font-size: 3.5rem;
+}
+
+.player {
+  flex: 50%;
+  padding: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.75s;
+}
+
+.card {
+  position: absolute;
+  left: 50%;
+  top: 16.5rem;
+  transform: translateX(-50%);
+  height: 17rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.turn {
+  opacity: 0.8;
+  background-color: #57294593;
+}
+
+/*********** MODAL WINDOW *************/
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 70rem;
+  background-color: #242222;
+  padding: 1rem 2rem;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.5s;
+  border-radius: 1rem;
+}
+
+.modal--credit {
+  color: rgb(160, 155, 155);
+  font-size: 1.5rem;
+  text-align: justify;
+  line-height: 2.5rem;
+}
+
+.modal--credit a {
+  color: rgb(215, 215, 215);
+  text-decoration: none;
+}
+
+.modal--rule {
+  color: rgb(205, 193, 193);
+  font-size: 1.2rem;
+  text-align: justify;
+  line-height: 2rem;
+}
+
+.table--score {
+  text-align: center;
+  width: 100%;
+  border: 0.2rem dotted;
+  font-size: 1.2rem;
+}
+
+.table--score th {
+  border: 0.2rem dotted;
+}
+
+.table--score td {
+  border: 0.2rem dotted;
+  font-size: 0.8em;
+}
+
+.modal--header {
+  text-align: center;
+  font-size: 3rem;
+  color: rgb(215, 215, 215);
+}
+
+.btn--close--modal {
+  color: rgb(215, 215, 215);
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 4rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
