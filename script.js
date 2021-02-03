@@ -22,6 +22,7 @@ const img1El = document.getElementById('img--1');
 
 const modalCredit = document.querySelector('.credit--pointer');
 const modalRule = document.querySelector('.rule--pointer');
+const overlay = document.querySelector('.overlay');
 
 // Music autoplay, on/off
 let music1 = new Audio('sounds/musicKH.mp3');
@@ -42,21 +43,25 @@ btnMusic.addEventListener('click', function () {
 const openModalCredit = function (e) {
   e.preventDefault();
   modalCredit.classList.remove('hidden');
+  overlay.classList.remove('hidden');
 };
 
 const closeModalCredit = function (e) {
   e.preventDefault();
   modalCredit.classList.add('hidden');
+  overlay.classList.add('hidden');
 };
 
 const openModalRule = function (e) {
   e.preventDefault();
   modalRule.classList.remove('hidden');
+  overlay.classList.remove('hidden');
 };
 
 const closeModalRule = function (e) {
   e.preventDefault();
   modalRule.classList.add('hidden');
+  overlay.classList.add('hidden');
 };
 
 // Function for calling by events
@@ -195,11 +200,16 @@ btnRule.addEventListener('click', openModalRule);
 btnCloseRule.addEventListener('click', sfxCancel);
 btnCloseRule.addEventListener('click', closeModalRule);
 
-// Btn Vredit
+// Btn Credit
 btnCredit.addEventListener('click', sfxSelect);
 btnCredit.addEventListener('click', openModalCredit);
 btnCloseCredit.addEventListener('click', sfxCancel);
 btnCloseCredit.addEventListener('click', closeModalCredit);
+
+// Close everywhere overlay clicked
+overlay.addEventListener('click', closeModalRule);
+overlay.addEventListener('click', closeModalCredit);
+overlay.addEventListener('click', sfxCancel);
 
 // Btn Hover Sound DOM
 btnMusic.addEventListener('mouseover', sfxMove);
